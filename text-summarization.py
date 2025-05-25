@@ -18,7 +18,7 @@ def summarize_text(text, max_length=130, min_length=30):
 
 
 def main():
-    file_path = "input.txt"  # Path to your input text file
+    file_path = "input.txt"
     text = read_file(file_path)
 
     summary = summarize_text(text)
