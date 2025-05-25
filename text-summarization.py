@@ -1,9 +1,6 @@
 from transformers import pipeline
 
-
-def read_file(file_path):
-    with open(file_path, "r", encoding="utf-8") as file:
-        return file.read()
+from utils import read_file
 
 
 def summarize_text(text, max_length=130, min_length=30):
@@ -18,11 +15,8 @@ def summarize_text(text, max_length=130, min_length=30):
 
 
 def main():
-    file_path = "input.txt"
-    text = read_file(file_path)
-
+    text = read_file("para.txt")
     summary = summarize_text(text)
-
     print(f"Summary:\n {summary}")
 
 
